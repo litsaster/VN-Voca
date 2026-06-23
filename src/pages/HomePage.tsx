@@ -16,10 +16,16 @@ const CATEGORIES: { key: Category; label: string; emoji: string }[] = [
   { key: 'pronoun', label: 'Pronouns', emoji: '🗣️' },
 ]
 
+const PRONOUN_GROUPS: { key: string; label: string }[] = [
+  { key: 'self', label: 'Yourself / We' },
+  { key: 'other', label: 'Others (you, he, she)' },
+]
+
 export default function HomePage() {
   const [data, setData] = useState<VocabItem[]>([])
   const [loading, setLoading] = useState(true)
   const [active, setActive] = useState<Category>('food')
+  const [subActive, setSubActive] = useState<string | null>(null)
   const [search, setSearch] = useState('')
   const [editingItem, setEditingItem] = useState<VocabItem | null>(null)
   const { learned, toggle } = useLearned()
@@ -32,6 +38,7 @@ export default function HomePage() {
 
   const filtered = data
     .filter(i => i.category === active)
+    .filter(i => active !== 'pronoun' || !subActive || i.group === subActive)
     .filter(i => {
       if (!search) return true
       const q = search.toLowerCase()
@@ -80,7 +87,7 @@ export default function HomePage() {
               return (
                 <button
                   key={c.key}
-                  onClick={() => setActive(c.key)}
+                  onClick={() => { setActive(c.key); setSubActive(null) }}
                   className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition cursor-pointer ${
                     active === c.key
                       ? 'border-[#d17a2b] bg-[#d17a2b] text-white'
@@ -96,6 +103,31 @@ export default function HomePage() {
           </div>
         </nav>
 
+        {active === 'pronoun' && (
+          <div className="mb-6 flex flex-wrap items-center gap-2">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#7b6e5c] mr-1">Group</span>
+            <button
+              onClick={() => setSubActive(null)}
+              className={`rounded-full border px-3 py-1.5 text-xs cursor-pointer transition ${
+                subActive === null
+                  ? 'border-[#d17a2b] bg-[#d17a2b] text-white'
+                  : 'border-border bg-card text-ink hover:border-accent'
+              }`}
+            >All</button>
+            {PRONOUN_GROUPS.map(g => (
+              <button
+                key={g.key}
+                onClick={() => setSubActive(g.key)}
+                className={`rounded-full border px-3 py-1.5 text-xs cursor-pointer transition ${
+                  subActive === g.key
+                    ? 'border-[#d17a2b] bg-[#d17a2b] text-white'
+                    : 'border-border bg-card text-ink hover:border-accent'
+                }`}
+              >{g.label}</button>
+            ))}
+          </div>
+        )}
+
         <section>
           <div className="mb-6 flex items-end justify-between gap-4 border-b border-border pb-4">
             <div>
@@ -103,6 +135,7 @@ export default function HomePage() {
               <h2 className="mt-1 text-3xl sm:text-4xl font-bold text-ink">
                 <span className="mr-2">{CATEGORIES.find(c => c.key === active)?.emoji}</span>
                 {CATEGORIES.find(c => c.key === active)?.label}
+                {subActive && <span className="text-2xl text-[#8e7d68] font-normal ml-2">· {PRONOUN_GROUPS.find(g => g.key === subActive)?.label}</span>}
               </h2>
             </div>
             <span className="text-sm tabular-nums text-[#8e7d68]">{filtered.length} words</span>
