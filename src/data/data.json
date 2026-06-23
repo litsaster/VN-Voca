@@ -1,0 +1,417 @@
+{
+  "foods": [
+    {
+      "id": "bun-bo",
+      "vietnamese": "Bún Bò",
+      "englishName": "Spicy Beef Noodle Soup",
+      "englishHint": "Bun Bow",
+      "description": "Spicy beef noodle soup from Huế, Central Vietnam",
+      "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781091778/Bun-bo_rxewd9.png"
+    },
+    {
+      "id": "pho",
+      "vietnamese": "Phở",
+      "englishName": "Noodle Soup",
+      "englishHint": "Fuh",
+      "description": "Traditional rice noodle soup with beef or chicken",
+      "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781091778/pho_aann2q.png"
+    },
+    {
+      "id": "banh-mi",
+      "vietnamese": "Bánh mì",
+      "englishName": "Vietnamese Sandwich",
+      "englishHint": "Bang mee",
+      "description": "Crispy baguette sandwich with various fillings",
+      "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781091778/banh-mi_afjalu.png"
+    },
+    {
+  "id": "bun-rieu",
+  "vietnamese": "Bún riêu",
+  "englishName": "Crab Noodle Soup",
+  "englishHint": "Boon Real",
+  "description": "Rice noodle soup with tomato-based broth and crab paste",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781150245/bun-rieu-cua_qmptts.png"
+},
+{
+  "id": "banh-cuon",
+  "vietnamese": "Bánh cuốn",
+  "englishName": "Steamed Rice Rolls",
+  "englishHint": "Bang goon",
+  "description": "Thin steamed rice rolls filled with minced pork and wood ear mushrooms",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781150930/banh-cuon_uqlydc.png"
+},
+{
+  "id": "nem-lui",
+  "vietnamese": "Nem nướng",
+  "englishName": "Lemongrass Skewers",
+  "englishHint": "Ne(ver) M(an) N(ever) Wong",
+  "description": "Grilled pork skewers with lemongrass, served with rice paper and herbs",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781150394/nem-lui_f2yvjb.png"
+},
+{
+  "id": "che",
+  "vietnamese": "Chè",
+  "englishName": "Sweet Soup / Dessert",
+  "englishHint": "Che(ss)",
+  "description": "Vietnamese sweet dessert soup with beans, fruits, and coconut milk",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781150718/che_nok9yu.png"
+},
+{
+  "id": "bun-dau-mam-tom",
+  "vietnamese": "Bún đậu mắm tôm",
+  "englishName": "Noodle with Tofu & Shrimp Paste",
+  "englishHint": "Bun(ny) Dow(jones) Mum(my) Tom(cat)",
+  "description": "Rice noodles served with fried tofu, pork, and fermented shrimp paste",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781151303/bun-dau-mam-tom_daublm.png"
+},
+{
+  "id": "ca-kho-to",
+  "vietnamese": "Cá kho tộ",
+  "englishName": "Caramelized Fish in Clay Pot",
+  "englishHint": "Car(pet) Koh(i) To(e)",
+  "description": "Fish braised in a sweet and savory caramel sauce",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781150100/ca-kho-to_ztbobz.png"
+},
+{
+  "id": "thit-kho-trung",
+  "vietnamese": "Thịt kho trứng",
+  "englishName": "Braised Pork with Eggs",
+  "englishHint": "Tit(ter) Coh(ort) Trung(kingdom)",
+  "description": "Pork belly and hard-boiled eggs braised in coconut juice",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781149916/thit-kho-trung_hidojj.png"
+},
+{
+  "id": "ga-tan",
+  "vietnamese": "Gà tần",
+  "englishName": "Stewed Chicken with Herbs",
+  "englishHint": "Ga(rage) Tun(a)",
+  "description": "Chicken stewed with medicinal herbs, often served as a tonic soup",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781151303/bun-dau-mam-tom_daublm.png"
+},
+{
+  "id": "banh-beo",
+  "vietnamese": "Bánh bèo",
+  "englishName": "Water Fern Cake",
+  "englishHint": "Bang (kok) Be (l) (a) O (range)",
+  "description": "Small steamed rice cakes topped with shredded shrimp, scallion oil, and crispy pork skin",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781508937/banh-beo_boepqp.png"
+},
+{
+  "id": "banh-bot-loc",
+  "vietnamese": "Bánh bột lọc",
+  "englishName": "Tapioca Dumpling",
+  "englishHint": "Bang (kok) Bought (l) Loc (k) (h)",
+  "description": "Chewy tapioca dumplings filled with shrimp and pork, wrapped in banana leaves",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781508785/banh-bot-loc_skdgvl.png"
+},
+{
+  "id": "com-ga",
+  "vietnamese": "Cơm gà",
+  "englishName": "Chicken Rice",
+  "englishHint": "Koom (sky) Ga (rage)",
+  "description": "Steamed chicken served with fragrant rice, shredded cabbage, and ginger-fish sauce",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781508992/com-ga_iyfrdx.png"
+},
+{
+  "id": "chao-suon",
+  "vietnamese": "Cháo sườn",
+  "englishName": "Pork Rib Porridge",
+  "englishHint": "Chow (mein) S (uit) (again) N (or)",
+  "description": "Rice porridge cooked with pork ribs, often served with fried dough sticks",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781509045/chao-suon_fwdbpu.png"
+},
+{
+  "id": "mi-xao-hai-san",
+  "vietnamese": "Mì xào hải sản",
+  "englishName": "Seafood Stir-fried Noodles",
+  "englishHint": "Mee (k) X (ray) (a) Ow (l) High (tea) Sun (n)",
+  "description": "Egg noodles stir-fried with shrimp, squid, vegetables, and soy sauce",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781509105/mi-xao-hai-san_rtn3c8.png"
+},
+{
+  "id": "canh-ga-chien-mam",
+  "vietnamese": "Cánh gà chiên mắm",
+  "englishName": "Fish Sauce Fried Chicken Wings",
+  "englishHint": "Kang (aroo) Ga (rage) Che (ck) (e) N (o) Mam (ma)",
+  "description": "Chicken wings marinated in fish sauce and deep-fried until crispy",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781509222/ga-chien-mam_aaju3m.png"
+},
+{
+  "id": "banh-trang-tron",
+  "vietnamese": "Bánh tráng trộn",
+  "englishName": "Mixed Rice Paper",
+  "englishHint": "Bang (kok) Trang (gle) (x) Tr (ip) (a) (w) N (one)",
+  "description": "Shredded rice paper mixed with dried beef, quail eggs, herbs, and tamarind sauce",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781509347/banh-trang-tron_sojvxj.png"
+},
+{
+  "id": "ha-cao",
+  "vietnamese": "Há cảo",
+  "englishName": "Vietnamese Dumpling",
+  "englishHint": "Ha (t) Cow (boy)",
+  "description": "Steamed dumplings filled with pork, shrimp, and wood ear mushrooms",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781509361/ha-cao_bcrtvq.png"
+},
+{
+  "id": "bun-mam",
+  "vietnamese": "Bún mắm",
+  "englishName": "Fermented Fish Noodle Soup",
+  "englishHint": "Bun (ny) Mam (ma)",
+  "description": "Rice noodles in a pungent broth made from fermented fish, with roasted pork, shrimp, and eggplants",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781509487/bun-mam_qgyr6h.png"
+},
+{
+  "id": "xoi-man",
+  "vietnamese": "Xôi mặn",
+  "englishName": "Savory Sticky Rice",
+  "englishHint": "Soy (bean) Man (ly)",
+  "description": "Sticky rice topped with savory ingredients like shredded chicken, pork floss, fried shallots, and mung bean",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781509699/xoi-man_a2urgm.png"
+},
+{
+  "id": "xoi-ngot",
+  "vietnamese": "Xôi ngọt",
+  "englishName": "Sweet Sticky Rice",
+  "englishHint": "Soy (bean) Naught (y)",
+  "description": "Sticky rice cooked with coconut milk and sugar, often served with mung bean, peanuts, or fruits",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781509718/xoi-ngot_molkof.png"
+}
+  ],
+  "drinks": [
+    {
+      "id": "ca-phe-sua-da",
+      "vietnamese": "Cà phê sữa đá",
+      "englishName": "Iced Coffee with Condensed Milk",
+      "englishHint": "Ca(t) Phe(asant) Sua(v) Da(nce)",
+      "description": "Vietnamese iced coffee with condensed milk",
+      "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781091778/ca-phe-sua-da_hkzm4h.png"
+    },
+    {
+      "id": "tra-da",
+      "vietnamese": "Trà đá",
+      "englishName": "Iced Tea",
+      "englishHint": "Tra(ffic) Da(nce)",
+      "description": "Iced tea – a common everyday drink",
+      "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781091778/tra-da_qy0eks.png"
+    },
+    {
+  "id": "nuoc-sam",
+  "vietnamese": "Nước sâm",
+  "englishName": "Herbal Tea",
+  "englishHint": "Nuke(clear) Sum(o)",
+  "description": "Sweet herbal tea made from various roots and herbs",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781151962/nuoc-sam_ih7ej5.png"
+},
+{
+  "id": "bia-hoi",
+  "vietnamese": "Bia hơi",
+  "englishName": "Fresh Beer",
+  "englishHint": "Beer Hoi(ckey)",
+  "description": "Light, freshly brewed draft beer, popular in street-side pubs",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781151585/bia-hoi_nebk5y.png"
+},
+{
+  "id": "nuoc-dua-tuoi",
+  "vietnamese": "Nước dừa tươi",
+  "englishName": "Coconut Water",
+  "englishHint": "Nook (at) Dew (drop) Raw",
+  "description": "Fresh coconut water, naturally sweet and refreshing",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781510144/dua-tuoi_p5lwrl.png"
+},
+{
+  "id": "sinh-to-bo",
+  "vietnamese": "Sinh tố bơ",
+  "englishName": "Avocado Smoothie",
+  "englishHint": "Sing (ing) Toe (nail) Bo (nus)",
+  "description": "Creamy avocado blended with condensed milk and ice",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781510114/sinh-to-bo_sl8y6h.png"
+},
+{
+  "id": "tra-tac",
+  "vietnamese": "Trà tắc",
+  "englishName": "Kumquat Tea",
+  "englishHint": "Tra (ffic) Tack (le)",
+  "description": "Iced tea with kumquat and honey/sugar, also called trà chanh muối",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781510129/tra-tac_oy7tz6.png"
+},
+{
+  "id": "da-xay",
+  "vietnamese": "Đá xay",
+  "englishName": "Frozen Blended Drink",
+  "englishHint": "Da (nce) X (ray) (a) Y (es)",
+  "description": "Generic term for blended ice drinks like smoothies, frappes",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781511330/da-xay_lyx81u.png"
+},
+{
+  "id": "ruou-nep",
+  "vietnamese": "Rượu nếp",
+  "englishName": "Fermented Sticky Rice Wine",
+  "englishHint": "Zoo (keeper) Nep (al)",
+  "description": "Sweet, slightly alcoholic rice wine, often eaten with mung bean",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781511331/ruou-nep_wt8l7b.png"
+},
+{
+  "id": "nuoc-cam",
+  "vietnamese": "Nước cam",
+  "englishName": "Orange Juice",
+  "englishHint": "Nook (at) Ca (mera) M (other)",
+  "description": "Freshly squeezed orange juice",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781511331/nuoc-cam_om0u6h.png"
+},
+{
+  "id": "sua-dau-nanh",
+  "vietnamese": "Sữa đậu nành",
+  "englishName": "Soy Milk",
+  "englishHint": "Sua (v) Dow (jones) Nang (h)",
+  "description": "Sweet or unsweetened soy milk, often served hot or cold",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781511332/sua-dau-nanh_bdkesz.png"
+},
+{
+  "id": "tra-sen",
+  "vietnamese": "Trà sen",
+  "englishName": "Lotus Tea",
+  "englishHint": "Tra (ffic) Sen (ate)",
+  "description": "Green tea scented with lotus blossoms",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781511540/tra-sen_nlkqkt.png"
+},
+{
+  "id": "cacao-nong",
+  "vietnamese": "Cacao nóng",
+  "englishName": "Hot Cocoa",
+  "englishHint": "Ca (t) Cow (boy) Nong (hang)",
+  "description": "Warm cocoa drink, often with condensed milk",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781512122/ca-cao_vauppu.png"
+},
+{
+  "id": "nuoc-yen",
+  "vietnamese": "Nước yến",
+  "englishName": "Bird's Nest Drink",
+  "englishHint": "Nook (at) Yen (dollar)",
+  "description": "Premium beverage made from swiftlet nest, often sweetened",
+  "image": "https://res.cloudinary.com/dp5foeodi/image/upload/q_auto/f_auto/v1781512127/nuoc-yen_gtatnw.png"
+}
+  ],
+"pronouns": [
+  {
+    "id": "toi",
+    "vietnamese": "tôi",
+    "englishName": "I / me (formal)",
+    "englishHint": "Toy (box)",
+    "group": "self",
+    "gender": "neutral",
+    "description": "📌 Neutral, polite. Used with strangers, colleagues, or anyone you want to show respect. Safe choice for beginners.",
+    "example": "Tôi là giáo viên. → I am a teacher.",
+    "image": "👤"
+  },
+  {
+    "id": "minh",
+    "vietnamese": "mình",
+    "englishName": "I / me (intimate)",
+    "englishHint": "Ming (vase)",
+    "group": "self",
+    "gender": "neutral",
+    "description": "🤝 Friendly, intimate. Used among close friends, family, or couples.",
+    "example": "Mình thích ăn phở. → I like phở.",
+    "image": "👥"
+  },
+  {
+    "id": "chung-toi",
+    "vietnamese": "chúng tôi",
+    "englishName": "we (excluding listener)",
+    "englishHint": "Chung (king) Toy",
+    "group": "self",
+    "gender": "neutral",
+    "description": "👥 'We' not including the person you are talking to.",
+    "example": "Chúng tôi là người Việt. → We are Vietnamese (but not you).",
+    "image": "👥"
+  },
+  {
+    "id": "chung-minh",
+    "vietnamese": "chúng mình",
+    "englishName": "we (including listener)",
+    "englishHint": "Chung Ming",
+    "group": "self",
+    "gender": "neutral",
+    "description": "👫 'We' including both you and the listener.",
+    "example": "Chúng mình đi ăn nhé. → Let's go eat together.",
+    "image": "👫"
+  },
+  {
+    "id": "anh",
+    "vietnamese": "anh",
+    "englishName": "you (younger man to older man) / I (man)",
+    "englishHint": "Ang (ry)",
+    "group": "other",
+    "gender": "male",
+    "description": "👨 Use to address an older male (brother), or a male speaker refers to himself.",
+    "example": "Anh đi đâu vậy? → Where are you going? (to an older male)",
+    "image": "👨"
+  },
+  {
+    "id": "chi",
+    "vietnamese": "chị",
+    "englishName": "you (younger woman to older woman) / I (woman)",
+    "englishHint": "Chee (se)",
+    "group": "other",
+    "gender": "female",
+    "description": "👩 Use to address an older female (sister), or a female speaker refers to herself.",
+    "example": "Chị làm đẹp quá! → You look beautiful! (to an older female)",
+    "image": "👩"
+  },
+  {
+    "id": "em",
+    "vietnamese": "em",
+    "englishName": "you (older person to younger) / I (younger)",
+    "englishHint": "Em (ber)",
+    "group": "other",
+    "gender": "neutral",
+    "description": "👶 Use to address a younger person, or a younger person referring to themselves.",
+    "example": "Em ăn cơm chưa? → Have you eaten? (to a younger person)",
+    "image": "👶"
+  },
+  {
+    "id": "ban",
+    "vietnamese": "bạn",
+    "englishName": "you (peer, friend)",
+    "englishHint": "Bun (ny)",
+    "group": "other",
+    "gender": "neutral",
+    "description": "👫 Used among friends of the same age or social status.",
+    "example": "Bạn có khỏe không? → How are you? (friend)",
+    "image": "👫"
+  },
+  {
+    "id": "co",
+    "vietnamese": "cô",
+    "englishName": "you (middle-aged woman) / I (female teacher)",
+    "englishHint": "Coh (hort)",
+    "group": "other",
+    "gender": "female",
+    "description": "👩‍🦱 For a middle-aged woman (auntie), or a female teacher speaking of herself.",
+    "example": "Cô bán bao nhiêu? → How much is it, miss?",
+    "image": "👩‍🦱"
+  },
+  {
+    "id": "chu",
+    "vietnamese": "chú",
+    "englishName": "you (middle-aged man) / I (male)",
+    "englishHint": "Choo (choo)",
+    "group": "other",
+    "gender": "male",
+    "description": "👨‍🦱 For a middle-aged man (uncle), or a man speaking to a younger person.",
+    "example": "Chú ơi, cho tôi hỏi đường. → Excuse me, uncle, can I ask for directions?",
+    "image": "👨‍🦱"
+  },
+  {
+    "id": "bac",
+    "vietnamese": "bác",
+    "englishName": "you (elder) / I (elder)",
+    "englishHint": "Bark (ing)",
+    "group": "other",
+    "gender": "neutral",
+    "description": "👴 For someone older than your parents (grandparent age), or a senior person referring to themselves.",
+    "example": "Bác khỏe không ạ? → How are you, elder?",
+    "image": "👴"
+  }
+]
+}

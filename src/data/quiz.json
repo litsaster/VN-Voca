@@ -1,0 +1,302 @@
+[
+  {
+    "questionText": "You are a young woman talking to your female best friend (same age). Which pronoun should you use to refer to yourself?",
+    "options": ["Tôi", "Em", "Tớ", "Chị"],
+    "correctIndex": 2,
+    "explanation": "Tớ is commonly used among female friends of the same age to refer to oneself in a friendly, gentle manner."
+  },
+  {
+    "questionText": "You meet your male professor. Which pronoun should you use to address him?",
+    "options": ["Bạn", "Thầy", "Anh", "Cậu"],
+    "correctIndex": 1,
+    "explanation": "Thầy is used to address a male teacher or professor with respect."
+  },
+  {
+    "questionText": "A boy is talking to his older sister. Which pair of pronouns should they use?",
+    "options": ["Tao – Mày", "Anh – Em", "Em – Anh", "Tớ – Cậu"],
+    "correctIndex": 2,
+    "explanation": "The younger sibling refers to himself as 'em' and addresses the older sibling as 'anh' (brother) or 'chị' (sister). The pattern is 'Em – Anh/Chị'."
+  },
+  {
+    "questionText": "Which pronoun is considered very rude if used with a stranger?",
+    "options": ["Tôi", "Mày", "Cậu", "Bạn"],
+    "correctIndex": 1,
+    "explanation": "Mày is extremely intimate and rude when used with anyone other than very close friends."
+  },
+  {
+    "questionText": "You are a woman talking to your boyfriend (same age). Which pronoun do you use for yourself?",
+    "options": ["Tôi", "Em", "Chị", "Anh"],
+    "correctIndex": 1,
+    "explanation": "In romantic relationships, the female often calls herself 'em' and the male 'anh'."
+  },
+  {
+    "questionText": "You are a man talking to your younger brother. Which pronoun should you use for yourself?",
+    "options": ["Em", "Anh", "Tôi", "Mình"],
+    "correctIndex": 1,
+    "explanation": "An older brother refers to himself as 'anh' when addressing a younger sibling."
+  },
+  {
+    "questionText": "In a formal meeting, how should you address the audience (a group of people)?",
+    "options": ["Bạn", "Các bạn", "Quý vị", "Mọi người"],
+    "correctIndex": 2,
+    "explanation": "Quý vị is a very polite and formal way to address an audience, similar to 'ladies and gentlemen'."
+  },
+  {
+    "questionText": "You are talking to your grandmother. Which pronoun should you use to refer to yourself?",
+    "options": ["Con", "Cháu", "Tôi", "Em"],
+    "correctIndex": 1,
+    "explanation": "Cháu is the respectful self-reference when speaking to grandparents or elderly relatives."
+  },
+  {
+    "questionText": "A teacher is talking to a student. Which pronoun should the teacher use to address the student?",
+    "options": ["Con", "Em", "Bạn", "Cô/Thầy"],
+    "correctIndex": 1,
+    "explanation": "Teachers often address students as 'em' (younger person) in a respectful and caring way."
+  },
+  {
+    "questionText": "Which pronoun can be used as a neutral, safe choice in most situations?",
+    "options": ["Tôi", "Tao", "Mình", "Em"],
+    "correctIndex": 0,
+    "explanation": "Tôi is the most common, neutral, and polite pronoun suitable for most situations."
+  },
+  {
+    "questionText": "Two close male friends are joking. They might use which pair of pronouns?",
+    "options": ["Tôi – Bạn", "Anh – Em", "Tao – Mày", "Tớ – Cậu"],
+    "correctIndex": 2,
+    "explanation": "Tao – Mày is used among very close friends (usually male) to show intimacy, but can be rude with others."
+  },
+  {
+    "questionText": "You are a young man talking to an elderly man you just met. How should you address him?",
+    "options": ["Bạn", "Anh", "Ông", "Cậu"],
+    "correctIndex": 2,
+    "explanation": "Ông is used to address an elderly man with respect, especially if significantly older."
+  },
+  {
+    "questionText": "A young employee talks to their boss (older). Which pronoun should the employee use for themselves?",
+    "options": ["Tôi", "Em", "Anh/Chị", "Tớ"],
+    "correctIndex": 0,
+    "explanation": "Tôi is safe and polite for workplace hierarchy. Alternatively, some use 'em' to show humility, but 'tôi' is more neutral."
+  },
+  {
+    "questionText": "Which pronoun is most commonly used among female students to refer to a same-age female friend (You)?",
+    "options": ["Cậu", "Bạn", "Chị", "Em"],
+    "correctIndex": 0,
+    "explanation": "Cậu is a gentle, friendly way to address a same-age female friend, paired with 'tớ' for I."
+  },
+  {
+    "questionText": "A child talking to their mother: '_____ yêu mẹ.' Which pronoun fits?",
+    "options": ["Con", "Cháu", "Em", "Tôi"],
+    "correctIndex": 0,
+    "explanation": "Con is the proper self-reference when speaking to parents."
+  },
+  {
+    "questionText": "You are a woman addressing an older female colleague. What pronoun should you use for her?",
+    "options": ["Bạn", "Cô", "Chị", "Em"],
+    "correctIndex": 2,
+    "explanation": "Chị is used for a slightly older female colleague to show respect while maintaining friendliness."
+  },
+  {
+    "questionText": "A restaurant waiter addressing a male customer: '_____ muốn gọi món gì?' Which pronoun?",
+    "options": ["Em", "Anh", "Bạn", "Cậu"],
+    "correctIndex": 1,
+    "explanation": "Waiters often address male customers as 'anh' (older brother) to show respect."
+  },
+  {
+    "questionText": "Which pronoun pair is typically used by couples in a romantic relationship?",
+    "options": ["Tôi – Bạn", "Tao – Mày", "Anh – Em", "Tớ – Cậu"],
+    "correctIndex": 2,
+    "explanation": "Anh – Em is the classic romantic pair (male 'anh', female 'em')."
+  },
+  {
+    "questionText": "You are a student talking to a female teacher. How do you address her?",
+    "options": ["Cô", "Chị", "Bạn", "Cậu"],
+    "correctIndex": 0,
+    "explanation": "Cô is used for a female teacher."
+  },
+  {
+    "questionText": "A man is talking to his wife. Which pronoun should he use for himself?",
+    "options": ["Em", "Anh", "Tôi", "Mình"],
+    "correctIndex": 1,
+    "explanation": "Husband often uses 'anh' when talking to his wife."
+  },
+  {
+    "questionText": "When you don't know someone's age or status, the safest pronoun to address them is:",
+    "options": ["Bạn", "Anh", "Chị", "Cậu"],
+    "correctIndex": 0,
+    "explanation": "Bạn is polite and safe for strangers of similar age, avoiding assumptions."
+  },
+  {
+    "questionText": "Which pronoun is used for self-reference in Southern Vietnam, similar to 'tôi' but more friendly?",
+    "options": ["Tui", "Tớ", "Mình", "Tao"],
+    "correctIndex": 0,
+    "explanation": "Tui is the Southern variant of 'tôi', friendly yet still polite."
+  },
+  {
+    "questionText": "A grandmother talking to her grandson. What should she call him?",
+    "options": ["Con", "Cháu", "Em", "Bạn"],
+    "correctIndex": 1,
+    "explanation": "Grandparents address grandchildren as 'cháu'."
+  },
+  {
+    "questionText": "You are writing an email to a company's customer service. You should address them as:",
+    "options": ["Quý công ty", "Các bạn", "Anh chị", "Quý vị"],
+    "correctIndex": 3,
+    "explanation": "Quý vị is the most formal and respectful way to address an organization or group of people in writing."
+  },
+  {
+    "questionText": "Which pronoun indicates a superior or authoritative tone, often found in literature?",
+    "options": ["Tao", "Mình", "Ta", "Tôi"],
+    "correctIndex": 2,
+    "explanation": "Ta is used by someone in a higher position or as a majestic 'I' in poetry and formal speech."
+  },
+  {
+    "questionText": "A young woman talking to her older brother: '_____ đi học về.' Fill with self-reference.",
+    "options": ["Em", "Chị", "Tôi", "Mình"],
+    "correctIndex": 0,
+    "explanation": "Younger sister uses 'em' to refer to herself when talking to older brother."
+  },
+  {
+    "questionText": "Which pronoun is gender-neutral and can be used by both males and females as self-reference?",
+    "options": ["Anh", "Chị", "Tôi", "Cô"],
+    "correctIndex": 2,
+    "explanation": "Tôi is neutral and used by any gender."
+  },
+  {
+    "questionText": "You are a young man meeting your girlfriend's parents for the first time. How should you address them?",
+    "options": ["Bác", "Cô/Chú", "Ông/Bà", "Anh/Chị"],
+    "correctIndex": 1,
+    "explanation": "Usually, the parents of your partner are addressed as 'cô' (aunt) and 'chú' (uncle), not 'bác' unless much older."
+  },
+  {
+    "questionText": "Which pronoun pair is commonly used among female friends?",
+    "options": ["Tao – Mày", "Tớ – Cậu", "Anh – Em", "Tôi – Bạn"],
+    "correctIndex": 1,
+    "explanation": "Tớ – Cậu is gentle and common among female friends."
+  },
+  {
+    "questionText": "A son speaking to his father: '_____ yêu ba.' Fill the blank.",
+    "options": ["Con", "Em", "Cháu", "Tôi"],
+    "correctIndex": 0,
+    "explanation": "Con is the proper self-reference for a child speaking to parent."
+  },
+  {
+    "questionText": "In a company meeting, a manager addresses his team. He might start with:",
+    "options": ["Các bạn", "Anh em", "Quý vị", "Mọi người"],
+    "correctIndex": 3,
+    "explanation": "Mọi người is inclusive and friendly, while 'các bạn' and 'anh em' are also used. 'Quý vị' is too formal for a team."
+  },
+  {
+    "questionText": "You are a shop assistant talking to a female customer about the same age. You should address her as:",
+    "options": ["Chị", "Em", "Bạn", "Cô"],
+    "correctIndex": 0,
+    "explanation": "Chị is polite for a female customer even if same age, showing respect."
+  },
+  {
+    "questionText": "A child talking to their grandfather: '_____ ơi, cháu thích kẹo.' The missing word to address grandfather:",
+    "options": ["Ông", "Bà", "Bác", "Chú"],
+    "correctIndex": 0,
+    "explanation": "Ông is used for grandfather."
+  },
+  {
+    "questionText": "Which pronoun can be used as both 'I' and 'you' depending on the speaker?",
+    "options": ["Anh", "Tôi", "Mình", "Cậu"],
+    "correctIndex": 0,
+    "explanation": "Anh can be used as 'I' (if the speaker is male and older) or 'you' (if addressing an older male)."
+  },
+  {
+    "questionText": "In a romantic context, a woman often refers to her partner (male) as:",
+    "options": ["Em", "Anh", "Bạn", "Mình"],
+    "correctIndex": 1,
+    "explanation": "The female calls her male partner 'anh'."
+  },
+  {
+    "questionText": "You are a young person talking to a middle-aged neighbor. A safe and respectful way to address them:",
+    "options": ["Bác", "Cô/Chú", "Anh/Chị", "Bạn"],
+    "correctIndex": 1,
+    "explanation": "Cô/Chú (aunt/uncle) is respectful for middle-aged adults not related to you."
+  },
+  {
+    "questionText": "Which pronoun is considered very formal and used in speeches to address a large audience?",
+    "options": ["Quý vị", "Các bạn", "Mọi người", "Các anh chị"],
+    "correctIndex": 0,
+    "explanation": "Quý vị is the most formal and polite."
+  },
+  {
+    "questionText": "A younger male boss talking to an older female employee. What should he call her?",
+    "options": ["Chị", "Cô", "Bạn", "Em"],
+    "correctIndex": 0,
+    "explanation": "Despite age, in workplace you often use 'chị' to show respect to older female colleagues."
+  },
+  {
+    "questionText": "Which pronoun pair is used between siblings where the older is female?",
+    "options": ["Chị – Em", "Anh – Em", "Em – Chị", "Tớ – Cậu"],
+    "correctIndex": 0,
+    "explanation": "Older sister uses 'chị' to refer to herself and calls younger sibling 'em'."
+  },
+  {
+    "questionText": "You are a student talking to a younger student (same school). You can address them as:",
+    "options": ["Em", "Bạn", "Cậu", "Anh/Chị"],
+    "correctIndex": 0,
+    "explanation": "Addressing a younger student as 'em' is polite and shows seniority."
+  },
+  {
+    "questionText": "Which pronoun is only used by female speakers to refer to themselves in a gentle way?",
+    "options": ["Tớ", "Mình", "Em", "Chị"],
+    "correctIndex": 0,
+    "explanation": "Tớ is often used by females (though not exclusively) to refer to themselves among friends."
+  },
+  {
+    "questionText": "You are a man talking to his ex-girlfriend (still friends). Which pronoun for yourself?",
+    "options": ["Anh", "Em", "Tôi", "Mình"],
+    "correctIndex": 2,
+    "explanation": "After breakup, 'tôi' is a safe neutral pronoun to avoid intimacy."
+  },
+  {
+    "questionText": "A female student addressing a male teacher. She should call him:",
+    "options": ["Thầy", "Anh", "Ông", "Bạn"],
+    "correctIndex": 0,
+    "explanation": "Thầy is correct for a male teacher."
+  },
+  {
+    "questionText": "In a business email to a partner you've never met, you should address them as:",
+    "options": ["Kính thưa Quý đối tác", "Chào bạn", "Kính gửi Anh/Chị", "Hello"],
+    "correctIndex": 2,
+    "explanation": "Kính gửi Anh/Chị is formal and respectful without assuming gender."
+  },
+  {
+    "questionText": "Which pronoun is primarily used in literary works to refer to oneself in a royal or majestic tone?",
+    "options": ["Trẫm", "Ta", "Tôi", "Mình"],
+    "correctIndex": 0,
+    "explanation": "Trẫm is a historical term used by emperors, but 'ta' is also used in literature. Among options, 'ta' is more common, but 'trẫm' is specific."
+  },
+  {
+    "questionText": "When you accidentally bump into someone on the street, you might apologize and use which pronoun for yourself?",
+    "options": ["Tôi", "Em", "Mình", "Tớ"],
+    "correctIndex": 0,
+    "explanation": "Tôi is the safest and most polite in such situations."
+  },
+  {
+    "questionText": "A young girl talking to her older cousin (male). She should call him:",
+    "options": ["Anh", "Chú", "Em", "Bạn"],
+    "correctIndex": 0,
+    "explanation": "Anh is used for an older male cousin."
+  },
+  {
+    "questionText": "You are a new employee addressing the CEO of the company. Use:",
+    "options": ["Giám đốc", "Anh", "Chú", "Bạn"],
+    "correctIndex": 0,
+    "explanation": "Use the title (Giám đốc) or 'ông/bà' depending on age. Among options, 'giám đốc' is safest."
+  },
+  {
+    "questionText": "Which pronoun pair is neutral and can be used in most formal writing?",
+    "options": ["Tôi – Bạn", "Tớ – Cậu", "Em – Anh", "Tao – Mày"],
+    "correctIndex": 0,
+    "explanation": "Tôi – Bạn is the standard neutral pair for formal writing."
+  },
+  {
+    "questionText": "You are a parent scolding your child. You might call your child:",
+    "options": ["Con", "Em", "Cháu", "Bạn"],
+    "correctIndex": 0,
+    "explanation": "Parents call their children 'con'."
+  }
+]
