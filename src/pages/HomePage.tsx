@@ -1,38 +1,29 @@
 import { useState, useEffect } from 'react'
-import type { Tab } from '../components/Tabs'
 import type { VocabItem } from '../lib/types'
 import { loadVocabulary } from '../lib/data'
 import { useLearned } from '../lib/store'
 import Header from '../components/Header'
-import SearchBar from '../components/SearchBar'
-import TabsComponent from '../components/Tabs'
-import Stats from '../components/Stats'
 import VocabCard from '../components/VocabCard'
+
+type Category = 'food' | 'drink' | 'pronoun'
+
+const CATEGORIES: { key: Category; label: string; emoji: string }[] = [
+  { key: 'food', label: 'Foods', emoji: '🍜' },
+  { key: 'drink', label: 'Drinks', emoji: '🥤' },
+  { key: 'pronoun', label: 'Pronouns', emoji: '🗣️' },
+]
 
 export default function HomePage() {
   const [data, setData] = useState<VocabItem[]>([])
   const [loading, setLoading] = useState(true)
-  const [activeTab, setActiveTab] = useState<Tab>('food')
-  const [search, setSearch] = useState('')
+  const [active, setActive] = useState<Category>('food')
   const { learned, toggle } = useLearned()
 
   useEffect(() => {
     loadVocabulary().then(d => { setData(d); setLoading(false) })
   }, [])
 
-  const filtered = data
-    .filter(i => i.category === activeTab)
-    .filter(i => {
-      if (!search) return true
-      const q = search.toLowerCase()
-      return (
-        i.englishName.toLowerCase().includes(q) ||
-        i.vietnamese.toLowerCase().includes(q) ||
-        i.englishHint.toLowerCase().includes(q)
-      )
-    })
-
-  const learnedInTab = filtered.filter(i => learned.has(i.id)).length
+  const filtered = data.filter(i => i.category === active)
 
   if (loading) {
     return (
@@ -46,27 +37,47 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <SearchBar value={search} onChange={setSearch} />
-      <TabsComponent active={activeTab} onChange={setActiveTab} />
-      <Stats
-        learned={learnedInTab}
-        total={filtered.length}
-        totalLearned={learned.size}
-      />
-      {filtered.length === 0 ? (
-        <div className="text-center py-16 text-[#b9a690]">No matching words found.</div>
-      ) : (
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-6">
-          {filtered.map(item => (
-            <VocabCard
-              key={item.id}
-              item={item}
-              learned={learned.has(item.id)}
-              onToggleLearned={toggle}
-            />
-          ))}
-        </div>
-      )}
+
+      {/* Category pills */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        {CATEGORIES.map(c => {
+          const count = data.filter(i => i.category === c.key).length
+          return (
+            <button
+              key={c.key}
+              onClick={() => setActive(c.key)}
+              className={`px-4 py-2 rounded-full text-sm font-medium border transition-all cursor-pointer ${
+                active === c.key
+                  ? 'bg-[#1a1a1a] border-[#1a1a1a] text-white'
+                  : 'bg-white border-[#e2d9cf] text-[#5b4e3d] hover:border-[#b9a690]'
+              }`}
+            >
+              {c.emoji} {c.label} ({count})
+            </button>
+          )
+        })}
+      </div>
+
+      {/* Section header */}
+      <div className="mb-4">
+        <h2 className="text-2xl font-bold text-[#1a1a1a]">
+          {CATEGORIES.find(c => c.key === active)?.emoji}{' '}
+          {CATEGORIES.find(c => c.key === active)?.label}
+        </h2>
+        <p className="text-sm text-[#8e7d68]">{filtered.length} words</p>
+      </div>
+
+      {/* Card grid */}
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-5">
+        {filtered.map(item => (
+          <VocabCard
+            key={item.id}
+            item={item}
+            learned={learned.has(item.id)}
+            onToggleLearned={toggle}
+          />
+        ))}
+      </div>
     </>
   )
 }
