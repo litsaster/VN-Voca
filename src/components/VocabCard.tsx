@@ -35,14 +35,14 @@ export default function VocabCard({ item, learned, onToggleLearned }: Props) {
           </div>
           <div className="p-4 flex flex-col gap-1.5">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-bold text-ink">{item.vietnamese}</h3>
+              <h3 className="text-[clamp(0.875rem,1.6vw,1.125rem)] font-bold text-ink truncate" title={item.vietnamese}>{item.vietnamese}</h3>
               <PronounceBtn text={item.vietnamese} size="sm" />
             </div>
-            <div className="bg-secondary/60 rounded-lg px-2.5 py-1.5 border-l-3 border-primary/30">
-              <p className="text-sm font-medium text-ink/80">"{item.englishHint}"</p>
+            <div className="bg-secondary/60 rounded-lg px-2 py-1 border-l-3 border-primary/30">
+              <p className="text-xs font-medium text-ink/80 truncate">"{item.englishHint}"</p>
             </div>
-            <p className="text-xs text-primary/70">{item.englishName}</p>
-            <div className="flex justify-end -mt-1">
+            <p className="text-[11px] text-primary/70 truncate">{item.englishName}</p>
+            <div className="flex justify-end -mt-0.5">
               <button
                 onClick={e => { e.stopPropagation(); onToggleLearned(item.id) }}
                 className={`text-base transition-colors cursor-pointer ${learned ? 'text-[#f5b042]' : 'text-[#e2d9cf] hover:text-[#f5b042]'}`}
