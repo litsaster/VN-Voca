@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { optimizeCloudinaryUrl } from '../lib/cloudinary'
 import type { VocabItem } from '../lib/types'
 import { loadVocabulary } from '../lib/data'
 import { speak } from '../lib/fpt-tts'
@@ -59,7 +60,7 @@ export default function FlashcardPage() {
         <div className="bg-[#faf7f0] p-5 pb-0 text-center">
           {item.category !== 'pronoun' && item.image ? (
             <img
-              src={item.image}
+              src={optimizeCloudinaryUrl(item.image)}
               alt={item.vietnamese}
               className="w-full max-h-[380px] object-cover rounded-[32px] shadow-[0_8px_20px_rgba(0,0,0,0.1)] bg-white"
             />

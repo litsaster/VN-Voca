@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { VocabItem } from '../lib/types'
 import PronounceBtn from './PronounceBtn'
+import { optimizeCloudinaryUrl } from '../lib/cloudinary'
 
 interface Props {
   item: VocabItem
@@ -27,7 +28,7 @@ export default function VocabCard({ item, learned, onToggleLearned, onEdit }: Pr
         <div className="absolute inset-0 [backface-visibility:hidden] bg-card rounded-2xl overflow-hidden border border-border shadow-card">
           <div className="aspect-[4/3] bg-secondary/60 overflow-hidden relative">
             {!isPronoun && item.image ? (
-              <img src={item.image} alt={item.vietnamese} className="w-full h-full object-cover" />
+              <img src={optimizeCloudinaryUrl(item.image)} alt={item.vietnamese} className="w-full h-full object-cover" />
             ) : (
               <div className="w-full h-full flex items-center justify-center text-6xl">
                 {item.englishName === 'I / me (formal)' ? '👤' : '👥'}
