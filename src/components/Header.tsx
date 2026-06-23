@@ -37,8 +37,8 @@ export default function Header({ searchValue, onSearchChange }: Props) {
         </div>
 
         {/* Title */}
-        <h1 className="mt-2 flex items-center gap-3 sm:gap-4 text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] text-white">
-          <img src="/logo.png" alt="VN Voca" className="h-[0.9em] sm:h-[0.85em] w-auto drop-shadow-lg rounded-sm" />
+        <h1 className="mt-2 flex items-center gap-3 sm:gap-4 text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] text-white cursor-pointer" onClick={() => navigate('/')}>
+          <img src="/logo.png" alt="VN Voca" className="h-[0.9em] sm:h-[0.85em] w-auto drop-shadow-lg rounded-sm pointer-events-none" />
           <span>Vietnamese<span className="ml-2 text-accent">.</span></span>
         </h1>
 
