@@ -8,7 +8,19 @@ function cleanText(raw: string): string {
   return raw.replace(/^text\s+/i, '').replace(/\btext\b/gi, '').trim()
 }
 
-export async function speak(text: string): Promise<void> {
+function speakWebSpeech(text: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (!window.speechSynthesis) return reject()
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = 'vi-VN'
+    utterance.rate = 0.9
+    utterance.onend = () => resolve()
+    utterance.onerror = () => reject()
+    speechSynthesis.speak(utterance)
+  })
+}
+
+async function speakFPT(text: string): Promise<void> {
   for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     try {
       const res = await fetch(FPT_API_URL, {
@@ -34,5 +46,13 @@ export async function speak(text: string): Promise<void> {
       if (attempt === MAX_RETRIES - 1) throw err
       await new Promise(r => setTimeout(r, RETRY_DELAY))
     }
+  }
+}
+
+export async function speak(text: string): Promise<void> {
+  try {
+    await speakWebSpeech(text)
+  } catch {
+    await speakFPT(text)
   }
 }
