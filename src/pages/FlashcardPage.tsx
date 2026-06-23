@@ -27,14 +27,14 @@ export default function FlashcardPage() {
 
   if (loading) {
     return (
-      <div className="text-center py-20 text-[#b9a690]">Đang tải...</div>
+      <div className="text-center py-20 text-[#b9a690]">Loading...</div>
     )
   }
 
   if (!item) {
     return (
       <div className="text-center py-20">
-        <p className="text-[#b9a690] mb-4">Không tìm thấy từ vựng</p>
+        <p className="text-[#b9a690] mb-4">Vocabulary not found</p>
         <Link to="/" className="text-[#d17a2b] underline">← Quay lại</Link>
       </div>
     )
@@ -43,7 +43,7 @@ export default function FlashcardPage() {
   return (
     <div className="max-w-2xl mx-auto">
       <Link to="/" className="text-sm text-[#7b6e5c] hover:text-[#d17a2b] transition-colors">
-        ← Quay lại
+← Back
       </Link>
 
       <div className="mt-4 bg-[#fffef7] rounded-[48px] shadow-[0_25px_45px_-12px_rgba(0,0,0,0.35)] overflow-hidden">
@@ -92,12 +92,12 @@ export default function FlashcardPage() {
           </div>
 
           <div className="mt-6 text-sm text-[#7b6e5c] leading-relaxed">
-            <p><strong className="text-[#b45f2b]">Tiếng Anh:</strong> {item.englishName}</p>
-            <p className="mt-2"><strong className="text-[#b45f2b]">Mô tả:</strong> {item.description}</p>
+            <p><strong className="text-[#b45f2b]">English:</strong> {item.englishName}</p>
+            <p className="mt-2"><strong className="text-[#b45f2b]">Description:</strong> {item.description}</p>
           </div>
 
           <div className="mt-6 text-xs text-[#bba88a] text-center">
-            💡 Giọng FPT AI – nếu lần đầu lỗi sẽ tự động thử lại
+            💡 Powered by FPT AI – auto-retry if first attempt fails
           </div>
         </div>
       </div>

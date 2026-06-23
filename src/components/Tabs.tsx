@@ -1,9 +1,9 @@
 type Tab = 'food' | 'drink' | 'pronoun'
 
 const TABS: { key: Tab; label: string }[] = [
-  { key: 'food', label: '🍲 Món ăn' },
-  { key: 'drink', label: '🥤 Thức uống' },
-  { key: 'pronoun', label: '🗣️ Đại từ' },
+  { key: 'food', label: '🍲 Foods' },
+  { key: 'drink', label: '🥤 Drinks' },
+  { key: 'pronoun', label: '🗣️ Pronouns' },
 ]
 
 interface Props {

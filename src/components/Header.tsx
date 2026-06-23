@@ -12,11 +12,11 @@ export default function Header() {
         </h1>
       </Link>
       <p className="text-[#7b6e5c] mt-1 text-sm">
-        Học tiếng Việt qua hình ảnh và phát âm thông minh
+        Learn Vietnamese vocabulary through smart flashcards
       </p>
       <nav className="flex justify-center items-center gap-4 mt-4 flex-wrap">
         <Link to="/" className="text-sm text-[#7b6e5c] hover:text-[#d17a2b] transition-colors underline underline-offset-4">
-          Từ vựng
+          Vocabulary
         </Link>
         <Link to="/quiz" className="text-sm text-[#7b6e5c] hover:text-[#d17a2b] transition-colors underline underline-offset-4">
           Quiz
@@ -30,7 +30,7 @@ export default function Header() {
           </>
         ) : (
           <Link to="/login" className="text-sm text-[#7b6e5c] hover:text-[#d17a2b] transition-colors underline underline-offset-4">
-            Đăng nhập
+            Log in
           </Link>
         )}
       </nav>

@@ -7,7 +7,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <footer className="text-center py-6 text-sm text-[#b9a690]">
-        © 2025 VN Voca – Giọng đọc FPT AI | Học mỗi ngày một từ mới
+        © 2025 VN Voca – Voice by FPT AI | Learn a new word every day
       </footer>
     </div>
   )

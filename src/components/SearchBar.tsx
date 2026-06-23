@@ -11,7 +11,7 @@ export default function SearchBar({ value, onChange }: Props) {
       </svg>
       <input
         type="text"
-        placeholder="Tìm kiếm từ vựng..."
+        placeholder="Search vocabulary..."
         value={value}
         onChange={e => onChange(e.target.value)}
         className="w-full pl-12 pr-4 py-3.5 rounded-full border border-[#e2d9cf] bg-white text-sm outline-none focus:border-[#d17a2b] focus:ring-3 focus:ring-[rgba(209,122,43,0.1)] transition-all"

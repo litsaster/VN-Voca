@@ -18,7 +18,7 @@ export default function QuizPage() {
   if (!q) return (
     <>
       <Header />
-      <div className="text-center py-20 text-[#b9a690]">Đang tải câu hỏi...</div>
+      <div className="text-center py-20 text-[#b9a690]">Loading questions...</div>
     </>
   )
 
@@ -50,9 +50,9 @@ export default function QuizPage() {
         <Header />
         <div className="max-w-lg mx-auto text-center py-16">
           <div className="text-6xl mb-4">🎉</div>
-          <h2 className="text-2xl font-bold text-[#2c2b28] mb-2">Kết quả</h2>
+          <h2 className="text-2xl font-bold text-[#2c2b28] mb-2">Results</h2>
           <p className="text-lg text-[#7b6e5c] mb-6">
-            Bạn trả lời đúng <strong className="text-[#d17a2b]">{score}</strong>/{questions.length} câu
+            You got <strong className="text-[#d17a2b]">{score}</strong>/{questions.length} correct
           </p>
           <div className="w-full bg-[#e7dfd5] rounded-full h-3 mb-8">
             <div
@@ -64,7 +64,7 @@ export default function QuizPage() {
             onClick={restart}
             className="px-8 py-3 bg-[#d17a2b] text-white rounded-full font-semibold text-sm cursor-pointer hover:bg-[#b8681f] transition-colors"
           >
-            Làm lại
+            Retry
           </button>
         </div>
       </>
@@ -76,7 +76,7 @@ export default function QuizPage() {
       <Header />
       <div className="max-w-lg mx-auto">
         <div className="text-center mb-4 text-sm text-[#8e7d68]">
-          Câu {current + 1}/{questions.length}
+          Question {current + 1}/{questions.length}
         </div>
         <div className="w-full bg-[#e7dfd5] rounded-full h-2 mb-8">
           <div
@@ -122,7 +122,7 @@ export default function QuizPage() {
               onClick={next}
               className="px-8 py-3 bg-[#d17a2b] text-white rounded-full font-semibold text-sm cursor-pointer hover:bg-[#b8681f] transition-colors"
             >
-              {current + 1 >= questions.length ? 'Xem kết quả' : 'Câu tiếp theo →'}
+              {current + 1 >= questions.length ? 'View Results' : 'Next Question →'}
             </button>
           </div>
         )}

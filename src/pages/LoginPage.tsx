@@ -20,7 +20,7 @@ export default function LoginPage() {
     <div className="max-w-sm mx-auto mt-20">
       <div className="bg-white rounded-3xl p-8 shadow-[0_8px_20px_rgba(0,0,0,0.05)]">
         <h2 className="text-2xl font-bold text-center text-[#2c2b28] mb-6">
-          {mode === 'login' ? 'Đăng nhập' : 'Đăng ký'}
+          {mode === 'login' ? 'Log in' : 'Sign up'}
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -33,7 +33,7 @@ export default function LoginPage() {
           />
           <input
             type="password"
-            placeholder="Mật khẩu"
+            placeholder="Password"
             value={password}
             onChange={e => setPassword(e.target.value)}
             required
@@ -44,18 +44,18 @@ export default function LoginPage() {
             type="submit"
             className="w-full py-3 bg-[#d17a2b] text-white rounded-xl font-semibold text-sm cursor-pointer hover:bg-[#b8681f] transition-colors"
           >
-            {mode === 'login' ? 'Đăng nhập' : 'Đăng ký'}
+            {mode === 'login' ? 'Log in' : 'Sign up'}
           </button>
         </form>
         <p className="text-center text-xs text-[#8e7d68] mt-4">
           {mode === 'login' ? (
-            <>Chưa có tài khoản?{' '}
+            <>Don't have an account?{' '}
               <button onClick={() => { setMode('signup'); setError(null) }} className="text-[#d17a2b] underline cursor-pointer">
                 Đăng ký
               </button>
             </>
           ) : (
-            <>Đã có tài khoản?{' '}
+            <>Already have an account?{' '}
               <button onClick={() => { setMode('login'); setError(null) }} className="text-[#d17a2b] underline cursor-pointer">
                 Đăng nhập
               </button>
@@ -64,7 +64,7 @@ export default function LoginPage() {
         </p>
       </div>
       <div className="text-center mt-4">
-        <Link to="/" className="text-xs text-[#b9a690] hover:text-[#d17a2b] transition-colors">← Quay lại</Link>
+        <Link to="/" className="text-xs text-[#b9a690] hover:text-[#d17a2b] transition-colors">← Back</Link>
       </div>
     </div>
   )

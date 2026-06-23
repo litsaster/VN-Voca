@@ -38,7 +38,7 @@ export default function HomePage() {
     return (
       <>
         <Header />
-        <div className="text-center py-20 text-[#b9a690]">Đang tải dữ liệu...</div>
+        <div className="text-center py-20 text-[#b9a690]">Loading...</div>
       </>
     )
   }
@@ -54,7 +54,7 @@ export default function HomePage() {
         totalLearned={learned.size}
       />
       {filtered.length === 0 ? (
-        <div className="text-center py-16 text-[#b9a690]">Không tìm thấy từ vựng nào phù hợp.</div>
+        <div className="text-center py-16 text-[#b9a690]">No matching words found.</div>
       ) : (
         <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-6">
           {filtered.map(item => (
