@@ -27,11 +27,11 @@ export default function Header({ searchValue, onSearchChange }: Props) {
           <div className="flex items-center gap-3 text-sm shrink-0">
             {user ? (
               <>
-                <Link to="/admin" className="text-accent-foreground/70 hover:text-accent-foreground transition-colors">Admin</Link>
-                <span className="text-xs text-accent-foreground/50">{user.email}</span>
+                <Link to="/admin" className="text-white/70 hover:text-white transition-colors">Admin</Link>
+                <span className="text-xs text-white/70">{user.email}</span>
               </>
             ) : (
-              <Link to="/login" className="text-accent-foreground/70 hover:text-accent-foreground transition-colors">Log in</Link>
+              <Link to="/login" className="text-white/70 hover:text-white transition-colors">Log in</Link>
             )}
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Header({ searchValue, onSearchChange }: Props) {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-accent-foreground/60"
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60"
               >
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.34-4.34" />
@@ -70,7 +70,7 @@ export default function Header({ searchValue, onSearchChange }: Props) {
                 placeholder="Search a word…"
                 value={searchValue || ''}
                 onChange={e => onSearchChange(e.target.value)}
-                className="flex w-full h-14 rounded-full border border-accent/40 bg-accent-foreground/10 pl-12 pr-4 text-base text-accent-foreground placeholder:text-accent-foreground/50 outline-none focus-visible:ring-1 focus-visible:ring-accent transition-colors"
+                className="flex w-full h-14 rounded-full border border-accent/40 bg-white/10 pl-12 pr-4 text-base text-white placeholder:text-white/50 outline-none focus-visible:ring-1 focus-visible:ring-accent transition-colors shadow-lg shadow-black/20"
               />
             </div>
           ) : null}
