@@ -4,22 +4,36 @@ const VOICE = 'linhsan'
 const MAX_RETRIES = 2
 const RETRY_DELAY = 500
 
+async function getAudioUrl(text: string): Promise<string> {
+  const res = await fetch(FPT_API_URL, {
+    method: 'POST',
+    headers: {
+      'api-key': FPT_API_KEY,
+      voice: VOICE,
+    },
+    body: text,
+  })
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  const raw = await res.text()
+  try {
+    const json = JSON.parse(raw)
+    if (json.async) return json.async
+    if (json.error !== 0) throw new Error(json.message || 'API error')
+    throw new Error('No audio URL in response')
+  } catch {
+    const url = raw.trim()
+    if (url.startsWith('http://') || url.startsWith('https://')) return url
+    const match = raw.match(/https?:\/\/[^\s"']+/)
+    if (match) return match[0]
+    throw new Error('Could not extract audio URL')
+  }
+}
+
 export async function speak(text: string): Promise<void> {
   for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     try {
-      const res = await fetch(FPT_API_URL, {
-        method: 'POST',
-        headers: {
-          api_key: FPT_API_KEY,
-          'Content-Type': 'application/json',
-          voice: VOICE,
-        },
-        body: JSON.stringify({ text }),
-      })
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      const data = await res.json()
-      if (data.error !== 0 || !data.async) throw new Error(data.message || 'No audio')
-      const audio = new Audio(data.async)
+      const url = await getAudioUrl(text)
+      const audio = new Audio(url)
       await new Promise<void>((resolve, reject) => {
         audio.onended = () => resolve()
         audio.onerror = () => reject(new Error('Audio playback failed'))
