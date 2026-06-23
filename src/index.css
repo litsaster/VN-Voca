@@ -6,6 +6,11 @@
   --color-paper: oklch(96% .02 80);
   --color-border: oklch(85% .04 75);
   --color-accent: oklch(78% .14 75);
+  --color-primary: oklch(78% .14 75);
+  --color-secondary: oklch(94% .03 80);
+  --color-muted-foreground: oklch(60% .02 60);
+  --color-muted: oklch(94% .03 70);
+  --color-primary-foreground: oklch(98% .01 80);
 }
 
 .bg-paper-texture {

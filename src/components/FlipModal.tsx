@@ -47,7 +47,7 @@ export default function FlipModal({ item, learned, onToggleLearned, onClose }: P
                   </span>
                 )}
               </div>
-              <div className="p-6 text-center">
+              <div className="p-6 text-center bg-card">
                 <h2 className="text-2xl font-bold text-ink">{item.vietnamese}</h2>
                 <p className="text-sm text-primary/70 mt-1">{item.englishName}</p>
                 <p className="text-xs text-muted-foreground mt-3">Tap to flip →</p>
@@ -59,8 +59,8 @@ export default function FlipModal({ item, learned, onToggleLearned, onClose }: P
               <div className="space-y-3 overflow-y-auto">
                 <p className="text-xl font-bold text-ink">{item.vietnamese}</p>
                 <p className="text-sm font-medium text-primary/70">{item.englishName}</p>
-                <div className="bg-[#fcf8f0] rounded-xl p-3 text-center border-l-4 border-primary/30">
-                  <p className="text-sm font-medium text-[#7a4a20]">"{item.englishHint}"</p>
+                <div className="bg-secondary/60 rounded-xl p-3 text-center border-l-4 border-primary/30">
+                  <p className="text-sm font-medium text-ink/80">"{item.englishHint}"</p>
                 </div>
                 {!isPronoun && item.description && (
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
