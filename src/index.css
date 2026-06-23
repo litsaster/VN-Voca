@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ink: oklch(22% .02 40);
+  --color-card: oklch(98% .015 80);
+  --color-paper: oklch(96% .02 80);
+  --color-border: oklch(85% .04 75);
+  --color-accent: oklch(78% .14 75);
+}
+
+.bg-paper-texture {
+  background-color: var(--color-paper);
+  background-image: radial-gradient(circle, oklch(85% .02 80 / 0.5) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-lacquer {
+  background: linear-gradient(135deg, oklch(40% .18 25), oklch(30% .15 20));
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, oklch(78% .14 80), oklch(62% .13 65));
+}
+
+.shadow-card {
+  box-shadow: 0 2px 0 0 oklch(45% .17 25 / .1), 0 8px 24px -8px oklch(30% .1 30 / .18);
+}
+
+.shadow-elevated {
+  box-shadow: 0 24px 60px -20px oklch(30% .15 25 / .35);
+}

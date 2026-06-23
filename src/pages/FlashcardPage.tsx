@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import type { VocabItem } from '../lib/types'
 import { loadVocabulary } from '../lib/data'
 import { speak } from '../lib/fpt-tts'
+import Header from '../components/Header'
 
 export default function FlashcardPage() {
   const { id } = useParams()
@@ -27,21 +28,29 @@ export default function FlashcardPage() {
 
   if (loading) {
     return (
-      <div className="text-center py-20 text-[#b9a690]">Loading...</div>
+      <>
+        <Header />
+        <div className="text-center py-20 text-[#b9a690]">Loading...</div>
+      </>
     )
   }
 
   if (!item) {
     return (
-      <div className="text-center py-20">
-        <p className="text-[#b9a690] mb-4">Vocabulary not found</p>
-        <Link to="/" className="text-[#d17a2b] underline">← Quay lại</Link>
-      </div>
+      <>
+        <Header />
+        <div className="text-center py-20">
+          <p className="text-[#b9a690] mb-4">Vocabulary not found</p>
+          <Link to="/" className="text-[#d17a2b] underline">← Quay lại</Link>
+        </div>
+      </>
     )
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <>
+      <Header />
+      <div className="max-w-2xl mx-auto">
       <Link to="/" className="text-sm text-[#7b6e5c] hover:text-[#d17a2b] transition-colors">
 ← Back
       </Link>
@@ -102,5 +111,6 @@ export default function FlashcardPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
