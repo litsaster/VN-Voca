@@ -34,6 +34,7 @@ export async function speak(text: string): Promise<void> {
     try {
       const url = await getAudioUrl(text)
       const audio = new Audio(url)
+      audio.playbackRate = 0.6
       await new Promise<void>((resolve, reject) => {
         audio.onended = () => resolve()
         audio.onerror = () => reject(new Error('Audio playback failed'))
