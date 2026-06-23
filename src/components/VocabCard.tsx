@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import type { VocabItem } from '../lib/types'
 import PronounceBtn from './PronounceBtn'
 
@@ -5,15 +6,15 @@ interface Props {
   item: VocabItem
   learned: boolean
   onToggleLearned: (id: string) => void
-  onSelect: (item: VocabItem) => void
 }
 
-export default function VocabCard({ item, learned, onToggleLearned, onSelect }: Props) {
+export default function VocabCard({ item, learned, onToggleLearned }: Props) {
+  const navigate = useNavigate()
   const isPronoun = item.category === 'pronoun'
 
   return (
     <div
-      onClick={() => onSelect(item)}
+      onClick={() => navigate(`/flashcard/${item.id}`)}
       className="block bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.1)] transition-shadow cursor-pointer"
     >
       <div className="aspect-[4/3] bg-[#faf7f0] overflow-hidden">

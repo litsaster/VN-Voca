@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
-import type { VocabItem } from '../lib/types'
 import { loadVocabulary } from '../lib/data'
 import { useLearned } from '../lib/store'
 import Header from '../components/Header'
 import VocabCard from '../components/VocabCard'
-import FlipModal from '../components/FlipModal'
 
 type Category = 'food' | 'drink' | 'pronoun'
 
@@ -19,7 +17,6 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
   const [active, setActive] = useState<Category>('food')
   const [search, setSearch] = useState('')
-  const [selectedItem, setSelectedItem] = useState<VocabItem | null>(null)
   const { learned, toggle } = useLearned()
 
   useEffect(() => {
@@ -97,21 +94,11 @@ export default function HomePage() {
                 item={item}
                 learned={learned.has(item.id)}
                 onToggleLearned={toggle}
-                onSelect={setSelectedItem}
               />
             ))}
           </div>
         </section>
       </div>
-
-      {selectedItem && (
-        <FlipModal
-          item={selectedItem}
-          learned={learned.has(selectedItem.id)}
-          onToggleLearned={toggle}
-          onClose={() => setSelectedItem(null)}
-        />
-      )}
     </>
   )
 }
