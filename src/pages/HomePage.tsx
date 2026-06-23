@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import type { VocabItem } from '../lib/types'
-import { loadVocabulary } from '../lib/data'
+import { loadVocabulary, updateVocabulary } from '../lib/data'
 import { useLearned } from '../lib/store'
+import { useAuth } from '../lib/auth'
 import Header from '../components/Header'
 import VocabCard from '../components/VocabCard'
+import EditWordModal from '../components/EditWordModal'
 
 type Category = 'food' | 'drink' | 'pronoun'
 
@@ -18,7 +20,9 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
   const [active, setActive] = useState<Category>('food')
   const [search, setSearch] = useState('')
+  const [editingItem, setEditingItem] = useState<VocabItem | null>(null)
   const { learned, toggle } = useLearned()
+  const { user } = useAuth()
 
   useEffect(() => {
     loadVocabulary().then(d => { setData(d); setLoading(false) })
@@ -36,6 +40,24 @@ export default function HomePage() {
       )
     })
 
+  const handleEditSave = async (form: { vietnamese: string; englishName: string; englishHint: string; description: string; image: string }) => {
+    if (!editingItem) return
+    try {
+      await updateVocabulary(editingItem.id, {
+        vietnamese: form.vietnamese,
+        english_name: form.englishName,
+        english_hint: form.englishHint,
+        description: form.description,
+        image_url: form.image,
+      })
+      setEditingItem(null)
+      const updated = await loadVocabulary()
+      setData(updated)
+    } catch (err: any) {
+      alert(`Error: ${err.message}`)
+    }
+  }
+
   if (loading) {
     return (
       <>
@@ -49,7 +71,6 @@ export default function HomePage() {
     <>
       <Header searchValue={search} onSearchChange={setSearch} />
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Category pills */}
         <nav className="mb-12 -mx-6 overflow-x-auto px-6">
           <div className="flex min-w-max items-center gap-2">
             <span className="mr-2 text-xs uppercase tracking-[0.3em] text-[#7b6e5c]">Categories</span>
@@ -74,7 +95,6 @@ export default function HomePage() {
           </div>
         </nav>
 
-        {/* Section header */}
         <section>
           <div className="mb-6 flex items-end justify-between gap-4 border-b border-border pb-4">
             <div>
@@ -87,7 +107,6 @@ export default function HomePage() {
             <span className="text-sm tabular-nums text-[#8e7d68]">{filtered.length} words</span>
           </div>
 
-          {/* Card grid */}
           <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-5">
             {filtered.map(item => (
               <VocabCard
@@ -95,11 +114,24 @@ export default function HomePage() {
                 item={item}
                 learned={learned.has(item.id)}
                 onToggleLearned={toggle}
+                onEdit={user ? setEditingItem : undefined}
               />
             ))}
           </div>
         </section>
       </div>
+
+      {editingItem && (
+        <EditWordModal
+          vietnamese={editingItem.vietnamese}
+          englishName={editingItem.englishName}
+          englishHint={editingItem.englishHint}
+          description={editingItem.description}
+          image={editingItem.image}
+          onSave={handleEditSave}
+          onClose={() => setEditingItem(null)}
+        />
+      )}
     </>
   )
 }
