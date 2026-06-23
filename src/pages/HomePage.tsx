@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import type { VocabItem } from '../lib/types'
 import { loadVocabulary } from '../lib/data'
 import { useLearned } from '../lib/store'
 import Header from '../components/Header'
