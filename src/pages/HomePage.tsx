@@ -3,6 +3,7 @@ import type { VocabItem } from '../lib/types'
 import { loadVocabulary, updateVocabulary } from '../lib/data'
 import { useLearned } from '../lib/store'
 import { useAuth } from '../lib/auth'
+import { useReady } from '../lib/ready'
 import Header from '../components/Header'
 import VocabCard from '../components/VocabCard'
 import EditWordModal from '../components/EditWordModal'
@@ -23,9 +24,10 @@ export default function HomePage() {
   const [editingItem, setEditingItem] = useState<VocabItem | null>(null)
   const { learned, toggle } = useLearned()
   const { user } = useAuth()
+  const { setReady } = useReady()
 
   useEffect(() => {
-    loadVocabulary().then(d => { setData(d); setLoading(false) })
+    loadVocabulary().then(d => { setData(d); setLoading(false); setReady() })
   }, [])
 
   const filtered = data

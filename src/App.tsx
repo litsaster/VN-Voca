@@ -1,15 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './lib/auth'
+import { ReadyProvider, useReady } from './lib/ready'
 import Layout from './components/Layout'
+import SplashScreen from './components/SplashScreen'
 import HomePage from './pages/HomePage'
 import QuizPage from './pages/QuizPage'
 import FlashcardPage from './pages/FlashcardPage'
 import AdminPage from './pages/AdminPage'
 import LoginPage from './pages/LoginPage'
 
-export default function App() {
+function AppContent() {
+  const { ready } = useReady()
   return (
-    <AuthProvider>
+    <>
+      {!ready && <SplashScreen />}
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
@@ -21,6 +25,16 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <ReadyProvider>
+        <AppContent />
+      </ReadyProvider>
     </AuthProvider>
   )
 }
