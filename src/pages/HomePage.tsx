@@ -51,8 +51,7 @@ export default function HomePage() {
         image_url: form.image,
       })
       setEditingItem(null)
-      const updated = await loadVocabulary()
-      setData(updated)
+      setData(prev => prev.map(i => i.id === editingItem.id ? { ...i, vietnamese: form.vietnamese, englishName: form.englishName, englishHint: form.englishHint, description: form.description, image: form.image } : i))
     } catch (err: any) {
       alert(`Error: ${err.message}`)
     }
