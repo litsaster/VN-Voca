@@ -33,6 +33,12 @@ export default function VocabCard({ item, learned, onToggleLearned, onEdit }: Pr
                 {item.englishName === 'I / me (formal)' ? '👤' : '👥'}
               </div>
             )}
+            <button
+              onClick={e => { e.stopPropagation(); onToggleLearned(item.id) }}
+              className={`absolute top-2 left-2 z-10 w-7 h-7 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-sm cursor-pointer hover:bg-black/50 transition-colors ${learned ? 'text-[#f5b042]' : 'text-white/70'}`}
+            >
+              {learned ? '⭐' : '☆'}
+            </button>
             {onEdit && (
               <button
                 onClick={e => { e.stopPropagation(); onEdit(item) }}
@@ -54,14 +60,6 @@ export default function VocabCard({ item, learned, onToggleLearned, onEdit }: Pr
               <p className="text-xs font-medium text-ink/80 truncate">"{item.englishHint}"</p>
             </div>
             <p className="text-[11px] text-primary/70 truncate">{item.englishName}</p>
-            <div className="flex justify-end -mt-0.5">
-              <button
-                onClick={e => { e.stopPropagation(); onToggleLearned(item.id) }}
-                className={`text-base transition-colors cursor-pointer ${learned ? 'text-[#f5b042]' : 'text-[#e2d9cf] hover:text-[#f5b042]'}`}
-              >
-                {learned ? '⭐' : '☆'}
-              </button>
-            </div>
           </div>
         </div>
 
