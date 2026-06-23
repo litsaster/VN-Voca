@@ -33,17 +33,22 @@ export default function VocabCard({ item, learned, onToggleLearned }: Props) {
               </div>
             )}
           </div>
-          <div className="p-4">
-            <h3 className="text-lg font-bold text-ink">{item.vietnamese}</h3>
-            <p className="text-sm text-primary/70 mt-0.5">{item.englishName}</p>
-            <div className="flex items-center justify-end gap-2 mt-3">
+          <div className="p-4 flex flex-col gap-1.5">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold text-ink">{item.vietnamese}</h3>
+              <PronounceBtn text={item.vietnamese} size="sm" />
+            </div>
+            <div className="bg-secondary/60 rounded-lg px-2.5 py-1.5 border-l-3 border-primary/30">
+              <p className="text-sm font-medium text-ink/80">"{item.englishHint}"</p>
+            </div>
+            <p className="text-xs text-primary/70">{item.englishName}</p>
+            <div className="flex justify-end -mt-1">
               <button
                 onClick={e => { e.stopPropagation(); onToggleLearned(item.id) }}
-                className={`text-lg transition-colors cursor-pointer ${learned ? 'text-[#f5b042]' : 'text-[#e2d9cf] hover:text-[#f5b042]'}`}
+                className={`text-base transition-colors cursor-pointer ${learned ? 'text-[#f5b042]' : 'text-[#e2d9cf] hover:text-[#f5b042]'}`}
               >
                 {learned ? '⭐' : '☆'}
               </button>
-              <PronounceBtn text={item.vietnamese} size="sm" />
             </div>
           </div>
         </div>
