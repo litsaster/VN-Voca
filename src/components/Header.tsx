@@ -37,12 +37,12 @@ export default function Header({ searchValue, onSearchChange }: Props) {
         </div>
 
         {/* Title */}
-        <h1 className="mt-2 text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] text-accent-foreground">
+        <h1 className="mt-2 text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] text-white">
           Vietnamese<span className="ml-2 text-accent">.</span>
         </h1>
 
         {/* Tagline */}
-        <p className="mt-3 max-w-xl text-base sm:text-lg text-accent-foreground/80">
+        <p className="mt-3 max-w-xl text-base sm:text-lg text-white/80">
           A Vietnamese vocabulary app for English speakers. Browse words by theme, then tap any card to open an interactive flashcard.
         </p>
 
